@@ -1,13 +1,94 @@
-body {
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Open Sans" !important;
+}
+summary.radios.summary::marker {
+  display: none;
+  width: 0;
+  height: 0;
+}
+details,
+details summary {
+  padding-left: 0;
+  background-image: none;
+  -webkit-appearance: none;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1281px) {
+  .container {
+    max-width: 1220px;
+  }
+}
+@media screen and (max-width: 885px) {
+  .container {
+    max-width: 845px;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width: 835px) {
+  .container {
+    max-width: 790px;
+  }
+}
+@media screen and (max-width: 821px) {
+  .container {
+    max-width: 770px;
+  }
+}
+@media screen and (max-width: 435px) {
+  .container {
+    max-width: 420px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .container {
+    max-width: 405px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .container {
+    max-width: 385px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .container {
+    max-width: 360px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .container {
+    max-width: 350px;
+  }
+}
+.user-helper-toogleButton {
+  background-color: #6c9b31 !important;
+}
+.user-helper-block {
+  background-color: #6c9b31 !important;
+}
+.user-helper-btn {
+  border: solid 1px #6c9b31 !important;
+}
+.user-helper-midBtn {
+  border: solid 1px #6c9b31 !important;
+}
+
+img {
+  background-size: cover !important;
 }
