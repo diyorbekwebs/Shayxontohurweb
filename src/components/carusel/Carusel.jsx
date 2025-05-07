@@ -1,0 +1,125 @@
+import React, { Component } from "react";
+import styled from "styled-components";
+import { Flex } from "..";
+import Carusel2 from "./Carusel2";
+import { Carusel1 } from "./Carusel1";
+import axios from "axios";
+import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
+const Content = styled(Flex)`
+  padding: 20px 0px 0px 0px;
+  background: #f5f3ef;
+  @media screen and (max-width: 435px) {
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+`;
+const Box = styled.div`
+  display: flex;
+  gap: 20px;
+  @media screen and (max-width: 435px) {
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+  }
+`;
+const Marqueee = styled(Marquee)`
+  padding: 17px 14px 18px 18px;
+  border-radius: 8px;
+  border: 1px solid #e6e1d8;
+  background: #fff;
+  /* 118.182% */
+  cursor: pointer;
+  position: relative;
+  top: 35px;
+`;
+const Div = styled(Flex)`
+  gap: 10px;
+`;
+const Text = styled.p`
+  font-family: Open Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  /* transition: 1s; */
+  @media screen and (max-width: 435px) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &:hover {
+    color: #6c9b31;
+    /* transition: 1s; */
+    font-weight: 600;
+    text-decoration: underline;
+  }
+`;
+const Text2 = styled.p`
+  font-family: Open Sans;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-right: 10px;
+`;
+
+export function Carusel() {
+  const [data, setData] = React.useState([]);
+  const [data2, setData2] = React.useState([]);
+  const [carusel1, setCarusel1] = React.useState([]);
+  const [carusel2, setCarusel2] = React.useState([]);
+  async function getinfo() {
+    try {
+      await axios.get("https://api.agroxizmatlar.uz/banner").then((res) => {
+        setData(res.data.items);
+        let arr = [];
+        let arr2 = [];
+        res.data.items.forEach((e) => {
+          if (e.type == "right") {
+            arr.push(e);
+            setCarusel1(arr);
+          }
+          if (e.type == "left") {
+            arr2.push(e);
+            setCarusel2(arr2);
+          }
+        });
+      });
+      await axios
+        .get("https://api.agroxizmatlar.uz/information/breaking-news")
+        .then((res) => setData2(res.data.items));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  React.useEffect(() => {
+    getinfo();
+  }, []);
+  return (
+    <Content>
+      <div className="container">
+        <Box>
+          <Carusel1 props={carusel1} />
+          <Carusel2 props={carusel2} />
+        </Box>
+        <Marqueee pauseOnHover>
+          {data2?.map((e) => (
+            <Div key={e.id}>
+              <Link style={{ color: "#000" }} to={`/infor/news/${e.id}`}>
+                <Text>
+                 Test
+                </Text>
+              </Link>
+              <Text2>|</Text2>
+            </Div>
+          ))}
+        </Marqueee>
+      </div>
+    </Content>
+  );
+}
