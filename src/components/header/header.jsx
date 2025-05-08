@@ -1,14 +1,14 @@
 import React from "react";
-import { list } from "../../constant";
+import { list } from "../../constant/index";
 import { Link } from "react-router-dom";
 import { Globe, Logo } from "../../assets/img/img";
 
 export default function Header() {
   return (
-    <div>
+    <header>
       <div className="container">
         <div
-          className="flex items-center justify-between border-b pb-[10px]"
+          className="flex items-center justify-between border-b pt-[30px] pb-[10px]"
           style={{ borderBottomColor: "#a3a3a380" }}
         >
           <div className="flex items-center  gap-[73px]">
@@ -32,6 +32,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

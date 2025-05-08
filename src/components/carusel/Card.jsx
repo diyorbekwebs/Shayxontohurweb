@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Flex } from "..";
 import "./style.css";
 const Content = styled(Flex)`
-  width: 873px;
+  width: 100%;
   height: 430px;
   padding: 320px 0px 65px 0px;
   border-radius: 8px;

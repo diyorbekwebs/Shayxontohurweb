@@ -8,7 +8,6 @@ import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 const Content = styled(Flex)`
   padding: 20px 0px 0px 0px;
-  background: #f5f3ef;
   @media screen and (max-width: 435px) {
     flex-direction: column;
     gap: 0px;
@@ -105,7 +104,7 @@ export function Carusel() {
       <div className="container">
         <Box>
           <Carusel1 props={carusel1} />
-          <Carusel2 props={carusel2} />
+          {/* <Carusel2 props={carusel2} /> */}
         </Box>
         <Marqueee pauseOnHover>
           {data2?.map((e) => (

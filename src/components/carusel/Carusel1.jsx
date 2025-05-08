@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "./style.css";
 import { Link } from "react-router-dom";
 const Slider1 = styled(Slider)`
-  width: 873px;
+  width: 100%;
   border-radius: 8px !important;
   @media screen and (max-width: 435px) {
     width: 100%;
