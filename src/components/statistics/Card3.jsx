@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
-// import { Icon11, Icon12, Icon13 } from "../../assets/imgs/img";
 import axios from "axios";
+import { Icon1, Icon2, Icon3 } from "../../assets/img/img";
 const Card = styled.div`
   padding: 52px 171px 106px 57px;
   width: 426px;
@@ -63,21 +63,21 @@ const Card3 = () => {
   return (
     <Card>
       <Item>
-        {/* <img src={Icon11} alt="" /> */}
+        <img src={Icon1} alt="" />
         <Texts>
           <Text1>{data?.detachedLandArea}</Text1>
           <Text2>Ajiratilgan yer maydoni</Text2>
         </Texts>
       </Item>
       <Item>
-        {/* <img src={Icon12} alt="" /> */}
+        <img src={Icon2} alt="" />
         <Texts>
           <Text1>{data?.allocatedSubsidies}</Text1>
-          <Text2>Ajiratilgan subsidiyalar</Text2>
+          <Text2>Ajirat2ilgan subsidiyalar</Text2>
         </Texts>
       </Item>
       <Item>
-        {/* <img src={Icon13} alt="" /> */}
+        <img src={Icon3} alt="" />
         <Texts>
           <Text1>{data?.greenhouseSubsidies}</Text1>
           <Text2>Issiqxona uchun subsidiyalar</Text2>

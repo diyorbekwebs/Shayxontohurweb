@@ -1,14 +1,12 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { styled } from "styled-components";
-import { statisInfo } from "../../constant/statistic";
 import Chart from "./Chart";
 import Card2 from "./Card2";
 import Card3 from "./Card3";
-import { Link } from "react-router-dom";
+import { Title } from "../yonalishlar/yonalishlar";
 
 const Content = styled.div`
-  padding: 60px 0px 70px 0px;
+  padding: 60px 0px 130px 0px;
   background: #f5f3ef;
 `;
 const Box = styled.div`
@@ -62,17 +60,7 @@ const Text1 = styled.p`
   line-height: normal;
   letter-spacing: -0.3px;
 `;
-const Title = styled.h5`
-  height: 34px;
-  color: #141f14;
-  font-family: Open Sans;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.3px;
-  padding-left: 20px;
-`;
+
 const Card = () => {
   return (
     <Content>
@@ -80,18 +68,6 @@ const Card = () => {
         <Box>
           <Title>Statistika</Title>
           <Bottom>
-            {/* <Div>
-              {statisInfo?.map((e) => {
-                return (
-                  <Link key={e.id} to={e.path}>
-                    <Card1>
-                      <Card1Img src={e.img} />
-                      <Text1>{e.lang["uz"].text}</Text1>
-                    </Card1>
-                  </Link>
-                );
-              })}
-            </Div> */}
             <Div>
               <Chart />
               <Card2 />

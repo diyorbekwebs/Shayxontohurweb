@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 const Title = styled("h1")`
-  font-family: Manrope;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
   width: 335px;
+  color: #454545;
 `;
 const Text = styled("p")`
-  font-family: Manrope;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 0%;

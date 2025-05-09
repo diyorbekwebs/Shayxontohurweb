@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 export const Title = styled("h1")`
   font-family: Open Sans;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 35px;
   line-height: 100%;
+  font: bold;
 `;
 export default function Yonalishlar() {
   return (

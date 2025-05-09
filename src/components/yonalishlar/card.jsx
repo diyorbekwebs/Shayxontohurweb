@@ -3,14 +3,12 @@ import { Test, TopVec } from "../../assets/img/img";
 import styled from "styled-components";
 
 const T1 = styled("p")`
-  font-family: Manrope;
   font-weight: 700;
   font-size: 20px;
   line-height: 130%;
   letter-spacing: 0%;
 `;
 const Date = styled("p")`
-  font-family: Manrope;
   font-weight: 500;
   font-size: 14px;
   line-height: 110.00000000000001%;
