@@ -20,11 +20,6 @@ export const list = [
     link: "",
   },
   {
-    id: 5,
-    name: "Biz haqimizda",
-    link: "",
-  },
-  {
     id: 6,
     name: "Bog’lanish",
     link: "",

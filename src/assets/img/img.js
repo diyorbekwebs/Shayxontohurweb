@@ -11,6 +11,9 @@ import Back2 from "./2.png";
 import Back3 from "./3.png";
 import Poltexnikum from "./poltexnikum.jpg";
 import RightVec from "./vectorright.svg";
+import Call from "./call.svg";
+import Globe2 from "./globe2.svg";
+import Message from "./message.svg";
 
 export {
   Logo,
@@ -26,4 +29,7 @@ export {
   Back3,
   Poltexnikum,
   RightVec,
+  Call,
+  Globe2,
+  Message,
 };

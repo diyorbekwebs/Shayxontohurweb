@@ -16,10 +16,10 @@ const Text = styled("p")`
 `;
 export default function Card() {
   return (
-    <div>
-      <img className="" src={Test} alt="" />
-      <div>
-        <div>
+    <div className="flex items-center gap-[50px]">
+      <img className="w-[630px] h-[565px]" src={Test} alt="" />
+      <div className="flex flex-col gap-[137px]">
+        <div className="flex flex-col gap-[18px]">
           <Title>Fruit and vegetables and protection against diseases</Title>
           <Text>Lorem ipsum djlor sit amet, consectetur adipiscing elit. </Text>
         </div>

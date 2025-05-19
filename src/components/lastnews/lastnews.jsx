@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Card from "./Card";
 
 const Title = styled("h2")`
   font-family: Open Sans;
@@ -11,12 +12,17 @@ const Title = styled("h2")`
 `;
 export default function Lastnews() {
   return (
-    <div>
+    <div className="mt-[100px]">
       <div className="container">
-        <div>
+        <div className="flex flex-col gap-[40px]">
           <Title>So’ngi Yangiliklar...</Title>
-          <div>
-            
+          <div className="flex flex-col gap-[50px]">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
         </div>
       </div>
