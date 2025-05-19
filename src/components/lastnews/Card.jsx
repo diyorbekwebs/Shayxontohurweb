@@ -26,7 +26,6 @@ export default function Card() {
         <div className="flex gap-[10px]">
           Read More <img src={RightVec} alt="" />
         </div>
-        <div></div>
       </div>
     </div>
   );
