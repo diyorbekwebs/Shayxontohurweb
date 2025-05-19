@@ -7,12 +7,12 @@ export const list = [
   {
     id: 2,
     name: "Politexnikum",
-    link: "",
+    link: "about",
   },
   {
     id: 3,
     name: "Yangiliklar",
-    link: "",
+    link: "news",
   },
   {
     id: 4,

@@ -20,7 +20,7 @@ export default function Header() {
             </div>
             <ul className="flex gap-[16px] ">
               {list?.map((e) => (
-                <Link id={e.id}>
+                <Link id={e.id} to={e.link}>
                   <li className="text-[16px]">{e.name}</li>
                 </Link>
               ))}
