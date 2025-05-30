@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-import { banners } from "../constant/banner";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
+import { banners } from "../../constant/carusel/carusel";
 
 export default function Page() {
   const { id } = useParams();
@@ -15,27 +15,31 @@ export default function Page() {
   const description = banner[`description${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || banner.descriptionUz;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6 md:py-10">
-      <Link to="/" className="flex items-center text-blue-600 hover:underline mb-6">
-        <ArrowLeft className="w-5 h-5 mr-1" />
-        <span>Orqaga qaytish</span>
-      </Link>
+    <div className="mb-[100px] mt-[20px]">
+      <div className="container">
+        <div>
+          <Link  to="/" className="flex items-center text-black -600 hover:underline mb-[40px]">
+            <ArrowLeft className="w-5 h-5 mr-1" />
+            <span>Orqaga qaytish</span>
+          </Link>
 
-      <div className="bg-white p-4 md:p-6 rounded-xl shadow-lg border border-gray-200">
-        <img
-          src={banner.url}
-          alt={title}
-          className="w-full h-64 md:h-96 object-cover rounded-xl border-2 border-blue-400 mb-6"
-        />
+          <div className="flex items-center flex-col">
+            <img
+              src={banner.url}
+              alt={title}
+              className="w-[70%] h-64 md:h-96 object-cover border-2 border-none mb-6"
+            />
 
-        <h1 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-          {title}
-        </h1>
+            <h1 className="w-[90%] text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+              {title}
+            </h1>
 
-        <div
-          className="text-gray-700 leading-relaxed space-y-4 text-base md:text-lg"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+            <div
+              className="w-[90%] text-gray-700 leading-relaxed space-y-4 text-base md:text-lg"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

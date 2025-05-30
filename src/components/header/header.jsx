@@ -1,31 +1,31 @@
-import React from "react";
 import { list } from "../../constant/index";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Globe, Logo } from "../../assets/img/img";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
-
   const changeLang = (lang) => {
+
     i18n.changeLanguage(lang);
   };
 
   return (
     <header className="sticky top-0 bg-white z-50">
-      <div className="container">
         <div
+      <div className="container">
           className="flex items-center justify-between border-b pt-[30px] pb-[10px]"
           style={{ borderBottomColor: "#a3a3a380" }}
         >
           <div className="flex items-center gap-[73px]">
             <div className="flex items-center gap-[10px]">
               <img src={Logo} alt="Logo" />
-              <h3 className="font-bold text-[14px] w-[260px]">{t("header.title")}</h3>
+              <h3 className="font-bold uppercase text-[18px] bg-[red] w-[300px]">{t("header.title")}</h3>
             </div>
             <ul className="flex gap-[16px]">
               {list?.map((e) => (
-                <li key={e.id} className="text-[16px]">
+                <li key={e.id} className="uppercase font-bold text-[16px]">
                   <Link to={`/${e.link}`}>{t(`nav.${e.name}`)}</Link>
                 </li>
               ))}
