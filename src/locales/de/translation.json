@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "news": "Nachrichten",
+    "leadership": "Leitung",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "title": "Polytechnikum des Shaykhontohur-Bezirks der Stadt Taschkent"
+  },
+  "yonalishlar": {
+    "title": "Bildungsrichtungen"
+  }
+}

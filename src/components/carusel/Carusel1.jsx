@@ -14,7 +14,7 @@ const Slider1 = styled(Slider)`
   }
 `;
 
-export function Carusel1({ props }) {
+export default function Carusel1({ props }) {
   const settings = {
     dots: true,
     fade: true,
@@ -31,12 +31,7 @@ export function Carusel1({ props }) {
     <Slider1 {...settings}>
       {props?.map((e) => (
         <Link key={e.id} to={`/infor/news3/${e.id}`}>
-          <Card
-            img={e.url}
-            text={
-            "test"
-            }
-          />
+          <Card img={e.url} text={"test"} />
         </Link>
       ))}
     </Slider1>

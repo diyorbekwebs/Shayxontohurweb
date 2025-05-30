@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "leadership": "Rahbariyat",
+    "contact": "Aloqa"
+  },
+  "header": {
+    "title": "Toshkent Shahar shayxontohur Tuman Politexnikumi"
+  },
+  "yonalishlar": {
+    "title": "O’quv Yo’nalishlari"
+  }
+}

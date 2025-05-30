@@ -1,27 +1,32 @@
 export const list = [
   {
     id: 1,
-    name: "Bosh sahifa",
+    name: "home",
     link: "",
   },
   {
     id: 2,
-    name: "Politexnikum",
+    name: "about",
     link: "about",
   },
   {
     id: 3,
-    name: "Yangiliklar",
+    name: "news",
     link: "news",
   },
   {
     id: 4,
-    name: "Raxbariyat",
-    link: "",
+    name: "leadership",
+    link: "leadership",
   },
   {
     id: 6,
-    name: "Bog’lanish",
-    link: "",
+    name: "contact",
+    link: "contact",
+  },
+  {
+    id: 7,
+    name: "kafedra",
+    link: "kafedra",
   },
 ];

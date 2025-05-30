@@ -2,7 +2,8 @@ import Logo from "./logo.svg";
 import Eye from "./eye.svg";
 import Globe from "./globe.svg";
 import TopVec from "./topvec.svg";
-import Test from "./test.jpeg";
+// import Test from "./test.jpeg";
+import Test from "./poltexnikum2.jpg";
 import Icon3 from "./icon3.svg";
 import Icon1 from "./icon1.svg";
 import Icon2 from "./icon2.svg";
@@ -14,6 +15,12 @@ import RightVec from "./vectorright.svg";
 import Call from "./call.svg";
 import Globe2 from "./globe2.svg";
 import Message from "./message.svg";
+import Phone from "./phone.svg";
+import Mail from "./mail.svg";
+import Mail2 from "./mail2.svg";
+import Calendar from "./calendar.svg";
+import Call2 from "./calling2.svg";
+import Map from "./map.svg";
 
 export {
   Logo,
@@ -32,4 +39,10 @@ export {
   Call,
   Globe2,
   Message,
+  Phone,
+  Mail,
+  Mail2,
+  Calendar,
+  Call2,
+  Map,
 };

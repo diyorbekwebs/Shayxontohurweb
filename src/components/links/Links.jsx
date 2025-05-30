@@ -53,7 +53,7 @@ const Links = () => {
     <Content>
       <div className="container">
         <Box>
-          <Title>Foydali xavolalar</Title>
+          <Title>Hamkorlar</Title>
           <Cards>
             {uselink?.map((e) => (
               <NavLink key={e.id} to={e.link} target="_blank">

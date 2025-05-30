@@ -14,15 +14,15 @@ const Date = styled("p")`
   line-height: 110.00000000000001%;
   letter-spacing: 0%;
 `;
-export default function Card() {
+export default function Card({ title, img, date }) {
   return (
     <div className="flex w-[417px] flex-col gap-[29px]">
-      <img className="w-[417px] h-[304px] rounded-[10px]" src={Test} alt="" />
+      <img className="w-[417px] h-[304px] rounded-[10px]" src={img} alt="" />
       <div className="flex w-[100%] justify-between items-center">
-        <T1>Avtomobillarga xizmat texnik xizmat ko’rsatish</T1>
+        <T1>{title}</T1>
         <img src={TopVec} alt="" />
       </div>
-      <Date>01.01.2024</Date>
+      <Date>{date}</Date>
     </div>
   );
 }
