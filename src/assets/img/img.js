@@ -21,6 +21,11 @@ import Mail2 from "./mail2.svg";
 import Calendar from "./calendar.svg";
 import Call2 from "./calling2.svg";
 import Map from "./map.svg";
+import New1 from "./new1.jpeg";
+import New2 from "./new2.jpeg";
+import New3 from "./new3.jpeg";
+import New4 from "./new4.jpeg";
+import New5 from "./new5.jpeg";
 
 export {
   Logo,
@@ -45,4 +50,9 @@ export {
   Calendar,
   Call2,
   Map,
+  New1,
+  New2,
+  New3,
+  New4,
+  New5,
 };

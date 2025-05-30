@@ -3,6 +3,8 @@ import Card from "./Card";
 import styled from "styled-components";
 import Slider from "react-slick";
 import "./style.css";
+import { useTranslation } from "react-i18next";
+
 import { Link } from "react-router-dom";
 const Slider1 = styled(Slider)`
   width: 100%;
@@ -15,8 +17,17 @@ const Slider1 = styled(Slider)`
 `;
 
 export default function Carusel1({ props }) {
+  const { i18n } = useTranslation();
+  const getTitle = (item) => {
+    const lang = i18n.language;
+    // titleUz, titleRu, titleEn ...
+    return (
+      item[`title${lang.charAt(0).toUpperCase() + lang.slice(1)}`] ||
+      item.titleUz
+    );
+  };
   const settings = {
-    dots: true,
+    // dots: true,
     fade: true,
     autoplay: true,
     speed: 2000,
@@ -30,8 +41,8 @@ export default function Carusel1({ props }) {
   return (
     <Slider1 {...settings}>
       {props?.map((e) => (
-        <Link key={e.id} to={`/infor/news3/${e.id}`}>
-          <Card img={e.url} text={"test"} />
+        <Link key={e.id} to={`/banner/${e.id}`}>
+          <Card img={e.url} text={getTitle(e)} />
         </Link>
       ))}
     </Slider1>

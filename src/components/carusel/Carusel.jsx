@@ -103,7 +103,7 @@ export function Carusel() {
         <Marqueee pauseOnHover>
           {data2?.map((e) => (
             <Div key={e.id}>
-              <Link style={{ color: "#000" }} to={`/infor/news/${e.id}`}>
+              <Link style={{ color: "#000" }} to={`banner/${e.id}`}>
                 <Text>{getTitle(e)}</Text>
               </Link>
               <Text2>|</Text2>

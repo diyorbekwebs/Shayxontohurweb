@@ -27,13 +27,9 @@ const Slider2 = styled(Slider)`
 const Carusel2 = ({ props }) => {
   return (
     <Slider2 {...settings}>
-      {props?.map(e => (
-        <Link key={e.id} to={`/infor/news3/${e.id}`}>
-          <Card2
-            t1={
-             "test"
-            }
-          />
+      {props?.map((e) => (
+        <Link key={e.id} to={`/banner/${e.id}`}>
+          <Card2 t1={"test"} />
         </Link>
       ))}
     </Slider2>

@@ -8,6 +8,7 @@ import News from "./Pages/news/new";
 import Leadership from "./Pages/Leadership/Leadership";
 import ContactPage from "./Pages/contact/ContactPage";
 import KafedraPage from './Pages/kafedra_page/kafedraPage';
+import Page from "./components/OnePage/Page";
 
 export default function App() {
   React.useEffect(() => {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="leadership" element={<Leadership />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="kafedra" element={<KafedraPage />} />
+         <Route path="/banner/:id" element={<Page />} />
       </Route>
     </Routes>
   );

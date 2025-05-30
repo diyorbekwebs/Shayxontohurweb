@@ -2,6 +2,7 @@
   display: none !important;
 }
 .slick-dots {
+  display: none;
   position: relative;
   bottom: 22%;
   right: 41% !important;

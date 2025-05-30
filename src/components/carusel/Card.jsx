@@ -4,8 +4,8 @@ import { Flex } from "..";
 import "./style.css";
 const Content = styled(Flex)`
   width: 100%;
-  height: 430px;
-  padding: 320px 0px 65px 0px;
+  height: 600px;
+  padding: 485px 0px 65px 0px;
   border-radius: 8px;
   @media screen and (max-width: 435px) {
     width: 100%;
