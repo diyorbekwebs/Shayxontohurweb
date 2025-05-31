@@ -16,7 +16,7 @@ const T2 = styled("p")`
 export default function Card({ text1, text2, background }) {
   return (
     <div
-      className="pt-[52px] px-[43px]  pb-[21px] flex flex-col gap-[33px]"
+      className="pt-[52px] px-[43px] w-[418px]  pb-[21px] flex flex-col gap-[33px]"
       style={{
         boxShadow: "0px 3px 20px 0px #42424226",
         backgroundImage: `url(${background})`,

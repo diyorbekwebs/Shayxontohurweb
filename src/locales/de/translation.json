@@ -11,5 +11,14 @@
   },
   "yonalishlar": {
     "title": "Bildungsrichtungen"
+  },
+
+  "history": {
+    "title": "Geschichte des Polytechnikums",
+    "text": "Die Geschichte des Polytechnikums im Shaykhontohur Bezirk begann im Jahr 2008. Die Bildungseinrichtung verbessert ihre Tätigkeit gemäß dem Präsidialerlass Nr. PF-5812 vom 6. September 2019 und entwickelt sich entsprechend modernen Anforderungen. Das Polytechnikum erstreckt sich über eine Fläche von 13.350 Quadratmetern und war ursprünglich für 540 Studenten ausgelegt. Heute studieren hier 1.335 Studenten in modernen beruflichen Fachrichtungen. Dieses Wachstum zeigt die hohe Nachfrage nach dem Polytechnikum und die stetig steigende Bildungsqualität. Seit der Gründung wurden moderne Infrastruktur, qualifiziertes Lehrpersonal und praxisorientierte Lehrpläne entwickelt. Derzeit werden hier Spezialisten in verschiedenen Bereichen mit enger Verbindung zur Produktion ausgebildet.",
+    "btn": "Mehr erfahren"
+  },
+  "whyus": {
+    "title": "Warum wir?"
   }
 }

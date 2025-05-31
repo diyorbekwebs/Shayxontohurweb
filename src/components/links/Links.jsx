@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Flex } from "..";
 import Card from "./Card";
-import axios from "axios";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { uselink } from "../../constant/uselful-link";
+import { useTranslation } from "react-i18next";
+
 const Content = styled(Flex)`
   padding: 95px 0px 99px 0px;
   background: var(--Withe, #fff);
@@ -35,29 +36,27 @@ const Cards = styled(Flex)`
     align-items: center;
   }
 `;
+
+const titles = {
+  uz: "Hamkorlar",
+  ru: "Партнеры",
+  en: "Partners",
+  de: "Partner",
+  zh: "合作伙伴",
+};
+
 const Links = () => {
-  // const [value, setValue] = React.useState([]);
-  // async function getInfo() {
-  //   try {
-  //     await axios
-  //       .get("https://api.agroxizmatlar.uz/useful-link")
-  //       .then((res) => setValue(res.data.items));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-  // React.useEffect(() => {
-  //   getInfo();
-  // }, []);
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language || "uz";
   return (
     <Content>
       <div className="container">
         <Box>
-          <Title>Hamkorlar</Title>
+          <Title>{titles[lang] || titles["uz"]}</Title>
           <Cards>
             {uselink?.map((e) => (
-              <NavLink key={e.id} to={e.link} target="_blank">
-                <Card img={e.img} text={e.title} />
+              <NavLink key={e.id} to={e.link} target="_blank" rel="noopener noreferrer">
+                <Card img={e.img} text={e.title[lang] || e.title["uz"]} />
               </NavLink>
             ))}
           </Cards>

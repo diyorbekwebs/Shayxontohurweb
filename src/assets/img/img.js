@@ -26,6 +26,12 @@ import New2 from "./new2.jpeg";
 import New3 from "./new3.jpeg";
 import New4 from "./new4.jpeg";
 import New5 from "./new5.jpeg";
+import Byd from "./byd.png";
+import Chevrolet from "./chevrolet.png";
+import SamAuto from "./samauto.png";
+import Tdtu from "./islomkarimov.png";
+import AmaliyFan from "./amaliyfan.png";
+import NurTex from "./nurtex.jpg";
 
 export {
   Logo,
@@ -55,4 +61,10 @@ export {
   New3,
   New4,
   New5,
+  Byd,
+  Chevrolet,
+  SamAuto,
+  Tdtu,
+  AmaliyFan,
+  NurTex,
 };

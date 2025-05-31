@@ -11,5 +11,13 @@
   },
   "yonalishlar": {
     "title": "Educational Directions"
+  },
+  "history": {
+    "title": "History of the Polytechnic",
+    "text": "The history of the Polytechnic in Shaykhontohur district began in 2008. The educational institution has been improving its activities in accordance with the President's decree No. PF-5812 dated September 6, 2019, developing in line with modern requirements. The Polytechnic occupies an area of 13,350 square meters and was initially designed for 540 students. Today, 1,335 students study here in modern vocational fields. This growth demonstrates the high demand for the Polytechnic and the steadily increasing quality of education. Since its establishment, modern infrastructure, a qualified teaching staff, and practice-oriented curricula have been developed. Currently, specialists in various fields are being trained here with close ties to production.",
+    "btn": "Learn More"
+  },
+  "whyus": {
+    "title": "Why us?"
   }
 }

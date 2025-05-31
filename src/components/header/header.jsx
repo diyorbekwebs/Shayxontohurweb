@@ -6,22 +6,24 @@ import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
-  const changeLang = (lang) => {
 
+  const changeLang = (lang) => {
     i18n.changeLanguage(lang);
   };
 
   return (
     <header className="sticky top-0 bg-white z-50">
-        <div
       <div className="container">
+        <div
           className="flex items-center justify-between border-b pt-[30px] pb-[10px]"
           style={{ borderBottomColor: "#a3a3a380" }}
         >
           <div className="flex items-center gap-[73px]">
             <div className="flex items-center gap-[10px]">
               <img src={Logo} alt="Logo" />
-              <h3 className="font-bold uppercase text-[18px] bg-[red] w-[300px]">{t("header.title")}</h3>
+              <h3 className="font-bold uppercase text-[16px]  w-[300px]">
+                {t("header.title")}
+              </h3>
             </div>
             <ul className="flex gap-[16px]">
               {list?.map((e) => (

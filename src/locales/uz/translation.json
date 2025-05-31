@@ -11,5 +11,14 @@
   },
   "yonalishlar": {
     "title": "O’quv Yo’nalishlari"
+  },
+
+  "history": {
+    "title": "Politexnikum tarixi",
+    "text": "Politehnikum tarixi Shayxontohur tumani Politehnikumi 2008-yilda tashkil etilgan. Ta’lim muassasasi Prezidentning 2019-yil 6-sentabrdagi PF-5812-sonli Farmoniga muvofiq o‘z faoliyatini yanada takomillashtirib, zamonaviy talablarga mos ravishda rivojlanmoqda. Politehnikum 13 350 kv.metr maydonda joylashgan bo‘lib, dastlab 540 nafar o‘quvchiga mo‘ljallangan edi. Bugungi kunda esa 1335 nafar o‘quvchi zamonaviy kasb-hunar yo‘nalishlari bo‘yicha tahsil olmoqda. Ushbu o‘sish politehnikumga bo‘lgan talab yuqoriligini va ta’lim sifatining yildan-yilga oshib borayotganini ko‘rsatadi. Tashkil topgan kundan boshlab politehnikumda zamonaviy infratuzilma, malakali pedagoglar jamoasi, amaliyotga yo‘naltirilgan o‘quv dasturlari shakllantirildi. Hozirda bu yerda turli sohalar bo‘yicha kasb egalari yetishtirilmoqda hamda ishlab chiqarish bilan chambarchas bog‘liq holda o‘quv jarayonlari olib borilmoqda.",
+    "btn": "Batafsil"
+  },
+  "whyus": {
+    "title": "Nima uchun biz?"
   }
 }
