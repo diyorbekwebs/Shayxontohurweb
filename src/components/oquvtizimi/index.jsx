@@ -1,26 +1,51 @@
 import React from "react";
 import styled from "styled-components";
-const Title = styled("h1")`
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  width: 335px;
+
+const Title = styled.h1`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
   color: #454545;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: 640px) {
+    font-size: 30px;
+    max-width: 400px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 40px;
+    max-width: 500px;
+  }
 `;
-const Text = styled("p")`
+
+const Text = styled.p`
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0%;
-  width: 649px;
+  max-width: 100%;
+  width: 100%;
+  text-align: justify;
+
+  @media (min-width: 640px) {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    max-width: 649px;
+  }
 `;
+
 export default function Oquvtizim() {
   return (
-    <div>
+    <div className="py-[40px] sm:py-[60px] lg:py-[80px]">
       <div className="container">
-        <div className="flex justify-between items-start mb-[80px]">
-          <Title>O’quv tizimi haqida malumot</Title>
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-6 lg:gap-12">
+          <Title>O’quv tizimi haqida ma'lumot</Title>
           <Text>
             Интернет-магазин NORNLIGHT предлагает широкий ассортимент
             светильников для освещения вашего дома или офиса. У нас вы найдете

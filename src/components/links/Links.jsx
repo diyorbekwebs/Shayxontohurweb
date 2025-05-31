@@ -16,14 +16,12 @@ const Box = styled(Flex)`
   gap: 32px;
 `;
 const Title = styled.h3`
-  color: #141414;
-  font-family: Open Sans;
-  font-size: 20px;
-  font-style: normal;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  padding-left: 20px;
+  font-size: 28px;
+  line-height: 120%;
+  text-align: center;
+  padding-left: 10px;
 `;
 const Cards = styled(Flex)`
   flex-wrap: wrap;
@@ -46,8 +44,8 @@ const titles = {
 };
 
 const Links = () => {
-    const { t, i18n } = useTranslation();
-    const lang = i18n.language || "uz";
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || "uz";
   return (
     <Content>
       <div className="container">
@@ -55,7 +53,12 @@ const Links = () => {
           <Title>{titles[lang] || titles["uz"]}</Title>
           <Cards>
             {uselink?.map((e) => (
-              <NavLink key={e.id} to={e.link} target="_blank" rel="noopener noreferrer">
+              <NavLink
+                key={e.id}
+                to={e.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Card img={e.img} text={e.title[lang] || e.title["uz"]} />
               </NavLink>
             ))}

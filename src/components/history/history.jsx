@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Title = styled("h1")`
-  font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  vertical-align: middle;
+  font-size: 28px;
+  line-height: 120%;
 `;
 const Text = styled("p")`
   font-weight: 300;

@@ -1,7 +1,18 @@
+import {
+  Andoza,
+  Elektromobil,
+  Kampyuter,
+  Quyoshpanel,
+  Tikuvchi1,
+  Tikuvchi2,
+  Usta,
+  Yoqilgi,
+} from "../../assets/img/img";
+
 export const oquvY = [
   {
     id: 1,
-    img: "url1",
+    img: Kampyuter,
     date: "2024-05-10",
     title: {
       uz: "Kompyuter tizimlarida dasturlash",
@@ -20,7 +31,7 @@ export const oquvY = [
   },
   {
     id: 2,
-    img: "url2",
+    img: Quyoshpanel,
     date: "2024-05-11",
     title: {
       uz: "Quyosh panellarini o‘rnatish va ularga texnik xizmat ko‘rsatish",
@@ -39,7 +50,7 @@ export const oquvY = [
   },
   {
     id: 3,
-    img: "url3",
+    img: Usta,
     date: "2024-05-12",
     title: {
       uz: "Avtomobillarni ta’mirlash va ularga xizmat ko‘rsatish",
@@ -58,7 +69,7 @@ export const oquvY = [
   },
   {
     id: 4,
-    img: "url4",
+    img: Elektromobil,
     date: "2024-05-13",
     title: {
       uz: "Elektromobillarga texnik xizmat ko‘rsatish va ta’mirlash",
@@ -77,7 +88,7 @@ export const oquvY = [
   },
   {
     id: 5,
-    img: "url5",
+    img: Yoqilgi,
     date: "2024-05-14",
     title: {
       uz: "Yoqilg‘i quyish shoxobchasi operatori",
@@ -96,7 +107,7 @@ export const oquvY = [
   },
   {
     id: 6,
-    img: "url6",
+    img: Tikuvchi1,
     date: "2024-05-15",
     title: {
       uz: "Tikuvchi",
@@ -115,7 +126,7 @@ export const oquvY = [
   },
   {
     id: 7,
-    img: "url7",
+    img: Tikuvchi2,
     date: "2024-05-16",
     title: {
       uz: "Yakka tartibda kiyim tikuvchi",
@@ -134,7 +145,7 @@ export const oquvY = [
   },
   {
     id: 8,
-    img: "url8",
+    img: Andoza,
     date: "2024-05-17",
     title: {
       uz: "Tikuvchilikda andoza tayyorlash",
@@ -151,5 +162,4 @@ export const oquvY = [
       en: "This specialty teaches how to create clothing patterns using mathematical calculations, plan and manage tailoring production processes, and understand the link between design and manufacturing.",
     },
   },
-
 ];

@@ -4,12 +4,21 @@ import styled from "styled-components";
 import Card from "./card";
 import { oquvY } from "../../constant/yonalish/oquv-yonalish";
 
-export const Title = styled("h1")`
-  font-family: Open Sans;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 100%;
-  font: bold;
+export const Title = styled.h1`
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 35px;
+    text-align: left;
+  }
 `;
 
 export default function Yonalishlar() {
@@ -17,16 +26,17 @@ export default function Yonalishlar() {
   const lang = i18n.language || "uz";
   const [showAll, setShowAll] = useState(false);
 
-  // Agar showAll false bo'lsa 3 ta card, aks holda hammasi
   const visibleCards = showAll ? oquvY : oquvY.slice(0, 3);
 
   return (
-    <div className="mt-[100px] mb-[100px]">
+    <div className="mt-[60px] sm:mt-[80px] lg:mt-[100px] mb-[60px] sm:mb-[80px] lg:mb-[100px]">
       <div className="container">
-        <div className="flex flex-col gap-[27px] ">
+        <div className="flex flex-col gap-6 sm:gap-[27px]">
           <Title>{t("yonalishlar.title")}</Title>
-          <div className="flex flex-col gap-[27px] items-center">
-            <div className="flex gap-[33px] items-start flex-wrap justify-center">
+
+          <div className="flex flex-col gap-6 items-center">
+            {/* Cards container */}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-[33px]">
               {visibleCards.map((e) => (
                 <Card
                   key={e.id}
@@ -36,14 +46,15 @@ export default function Yonalishlar() {
                 />
               ))}
             </div>
-            {/* faqat hamma card ko'rsatilmaganida show more ko'rsatiladi */}
+
+            {/* Show More button */}
             {!showAll && oquvY.length > 3 && (
-              <div
+              <button
                 onClick={() => setShowAll(true)}
-                className="bg-[#76A43D87] py-[10px] font-bold text-[#fff] text-[16px] px-[40px] rounded-[10px] cursor-pointer"
+                className="bg-[#76A43D] hover:bg-[#5d832f] transition-colors duration-300 py-2 px-6 text-white font-semibold text-sm sm:text-[16px] rounded-[10px]"
               >
                 {t("yonalishlar.showMore")}
-              </div>
+              </button>
             )}
           </div>
         </div>

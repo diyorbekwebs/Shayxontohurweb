@@ -32,6 +32,14 @@ import SamAuto from "./samauto.png";
 import Tdtu from "./islomkarimov.png";
 import AmaliyFan from "./amaliyfan.png";
 import NurTex from "./nurtex.jpg";
+import Andoza from "./andoza.jpg";
+import Elektromobil from "./elektromobil.avif";
+import Kampyuter from "./kampyuter.jpg";
+import Quyoshpanel from "./quyoshpanel.jpg";
+import Tikuvchi1 from "./tikuvchi.jpg";
+import Tikuvchi2 from "./tikuvchi2.jpg";
+import Usta from "./usta.jpg";
+import Yoqilgi from "./yoqilgi.webp";
 
 export {
   Logo,
@@ -67,4 +75,12 @@ export {
   Tdtu,
   AmaliyFan,
   NurTex,
+  Andoza,
+  Elektromobil,
+  Kampyuter,
+  Quyoshpanel,
+  Tikuvchi1,
+  Tikuvchi2,
+  Usta,
+  Yoqilgi,
 };
