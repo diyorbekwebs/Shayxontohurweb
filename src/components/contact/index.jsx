@@ -52,9 +52,9 @@ const Contact = () => {
         <Top>
           <YanMaps>
             <YandexMap
-              defaultState={{ center: [41.311056, 69.291528], zoom: 18 }}
+              defaultState={{ center: [41.342915, 69.166675], zoom: 18 }}
             >
-              <Placemark defaultGeometry={[41.311056, 69.291528]} />
+              <Placemark defaultGeometry={[41.342915, 69.166675]} />
               <FullscreenControl />
               <ZoomControl />
             </YandexMap>

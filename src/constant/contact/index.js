@@ -11,18 +11,18 @@ export const contactdb = [
     id: 2,
     title: "Aloqa",
     img: Call2,
-    text: "+998 95 450-59-50",
+    text: "+998712185542 , +998712185993",
   },
   {
     id: 3,
     title: "Elektron Manzil",
     img: Mail2,
-    gmail: "garden@agro.uz",
+    gmail: "azizbekashurov995@gmail.com",
   },
   {
     id: 5,
     title: "Ish tartibi",
     img: Calendar,
-    text: "Dushanba–Juma08:30 dan 17:30 gacha.",
+    text: "Dushanba–Shanba 08:30 dan 17:30 gacha.",
   },
 ];

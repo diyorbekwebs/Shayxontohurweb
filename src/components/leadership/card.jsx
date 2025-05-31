@@ -1,23 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { Mail, Phone, Test } from "../../assets/img/img";
+import { Aziz, Mail, Phone, Test } from "../../assets/img/img";
 const Text1 = styled("h3")`
-  width: 249px;
+  width: 400px;
   font-family: Open Sans;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-align: center;
+  /* text-align: center; */
   vertical-align: middle;
+  /* background-color: red; */
 `;
 const Text2 = styled("p")`
+  width: 650px;
   font-family: Open Sans;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 30px;
   letter-spacing: 0%;
-  text-align: center;
+  /* text-align: center; */
   color: #141414;
 `;
 const Text3 = styled("p")`
@@ -36,42 +38,52 @@ const Text3 = styled("p")`
 const Btn = styled("div")`
   font-family: Roboto;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
   background: #76a43dab;
-  width: 162.0660400390625px;
-  height: 33.97792053222656px;
+  width: 250px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
   color: #fff;
 `;
-export default function Card() {
+export default function Card({
+  img,
+  position,
+  fullName,
+  receptionTime,
+  phone,
+  email,
+}) {
   return (
-    <div className="flex flex-col bg-[#fff] gap-[11px] items-center pt-[13px] pb-[34px] rounded-[13px] w-[308px]">
-      <img
-        className="w-[109px] h-[110px] mb-[2px] rounded-[50px]"
-        src={Test}
-        alt=""
-      />
-      <Text1>XUSNIDDIN KARIMOV MOMINOVICH</Text1>
-      <Text2 className="mb-[18px]">Direktor</Text2>
-      <div className="mb-[16px]">
-        <Text3>
-          <img src={Phone} alt="" />
-          +998979877878
-        </Text3>
-        <Text3>
-          <img src={Mail} alt="" />
-          diyor@gmail.com
-        </Text3>
+    <div className="flex flex bg-[#fff] gap-[50px] items-center pt-[16px] pb-[25px] pl-[17px] pr-[15px] rounded-[13px]">
+      <img className="w-[250px] h-[300px] mb-[2px]" src={img} alt="" />
+      <div className="flex flex-col gap-[50px]">
+        <div className="flex flex-col gap-[5px]">
+          <Text2>{position}</Text2>
+          <Text1>{fullName}</Text1>
+          <div className="mb-[16px]">
+            <Text2 className="mb-[5px]">
+              <b>{receptionTime}</b>
+            </Text2>
+            <Text3>
+              <img src={Phone} alt="" />
+              {phone}
+            </Text3>
+            <Text3>
+              <img src={Mail} alt="" />
+              {email}
+            </Text3>
+          </div>
+        </div>
+        {/* <Btn>Murojaat</Btn> */}
       </div>
-      <Btn>Показать еще</Btn>
     </div>
   );
 }

@@ -2,13 +2,39 @@ import {
   AmaliyFan,
   Byd,
   Chevrolet,
+  Giz,
   Logo,
   NurTex,
   SamAuto,
   Tdtu,
+  Unesco,
 } from "../../assets/img/img";
 
 export const uselink = [
+  {
+    id: 7,
+    link: "https://www.giz.de/",
+    img: Giz,
+    title: {
+      uz: "GIZ",
+      ru: "GIZ",
+      en: "GIZ",
+      de: "GIZ",
+      zh: "GIZ厂",
+    },
+  },
+  {
+    id: 8,
+    link: "https://www.unesco.org/ru",
+    img: Unesco,
+    title: {
+      uz: "YUNESKO",
+      ru: "ЮНЕСКО",
+      en: "UNESCO",
+      de: "UNESCO",
+      zh: "联合国教科文组织",
+    },
+  },
   {
     id: 1,
     link: "https://bydfactory.uz/",

@@ -24,9 +24,9 @@ export const list = [
     name: "contact",
     link: "contact",
   },
-  {
-    id: 7,
-    name: "kafedra",
-    link: "kafedra",
-  },
+  // {
+  //   id: 7,
+  //   name: "kafedra",
+  //   link: "kafedra",
+  // },
 ];

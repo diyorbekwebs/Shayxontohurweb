@@ -19,7 +19,7 @@ const Content = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 148px;
+  width: 155px;
   height: 120px;
   flex-shrink: 0;
 `;

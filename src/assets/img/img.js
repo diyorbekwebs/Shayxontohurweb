@@ -40,8 +40,20 @@ import Tikuvchi1 from "./tikuvchi.jpg";
 import Tikuvchi2 from "./tikuvchi2.jpg";
 import Usta from "./usta.jpg";
 import Yoqilgi from "./yoqilgi.webp";
+import Giz from "./giz.jpeg";
+import Unesco from "./unseco.png";
+import Aziz from "./Aziz.jpeg";
+import Direktor from "./Direktor.jpeg";
+import Mansur from "./Mansur.jpeg";
+import Umida from "./Umida.jpeg";
 
 export {
+  Umida,
+  Mansur,
+  Direktor,
+  Aziz,
+  Giz,
+  Unesco,
   Logo,
   Eye,
   Globe,
