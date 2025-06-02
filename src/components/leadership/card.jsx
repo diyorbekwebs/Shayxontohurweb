@@ -63,7 +63,12 @@ export default function Card({
 }) {
   return (
     <div className="flex flex bg-[#fff] gap-[50px] items-center pt-[16px] pb-[25px] pl-[17px] pr-[15px] rounded-[13px]">
-      <img className="w-[250px] h-[300px] mb-[2px]" src={img} alt="" />
+      <img
+        className="w-[250px] h-[300px] object-cover mb-[2px]"
+        src={img}
+        alt=""
+      />
+
       <div className="flex flex-col gap-[50px]">
         <div className="flex flex-col gap-[5px]">
           <Text2>{position}</Text2>

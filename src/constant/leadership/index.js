@@ -107,6 +107,6 @@ export const Leader = [
       zh: "接待时间：星期二（13:00–17:00），星期四（13:00–17:00）",
     },
     phone: "+998712185993", // telefon raqami qo'shilsin, kerak bo'lsa
-    email: "umida.yuldasheva@example.com", // email qo'shilsin, kerak bo'lsa
+    email: "umidamumtoza455@gmail.com", // email qo'shilsin, kerak bo'lsa
   },
 ];

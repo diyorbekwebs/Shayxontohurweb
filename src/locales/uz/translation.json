@@ -20,5 +20,16 @@
   },
   "whyus": {
     "title": "Nima uchun biz?"
+  },
+  "footer": {
+    "title": "Toshkent Shahar Shayxontohur Tuman Politexnikumi",
+    "home": "Bosh Sahifa",
+    "about": "Biz Haqimizda",
+    "news": "Yangiliklar",
+    "partners": "Hamkorlarimiz",
+    "directions": "Yo'nalishlar",
+    "management": "Rahbariyat",
+    "contact": "Aloqa",
+    "address": "Manzil"
   }
 }

@@ -27,7 +27,7 @@ import New3 from "./new3.jpeg";
 import New4 from "./new4.jpeg";
 import New5 from "./new5.jpeg";
 import Byd from "./byd.png";
-import Chevrolet from "./chevrolet.png";
+import Chevrolet from "./chevrolet.jpg";
 import SamAuto from "./samauto.png";
 import Tdtu from "./islomkarimov.png";
 import AmaliyFan from "./amaliyfan.png";

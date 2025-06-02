@@ -61,14 +61,14 @@ export const uselink = [
   },
   {
     id: 3,
-    link: "https://chevrolet.uz/",
-    img: Chevrolet,
+    link: "https://uzautomotors.com/",
+    img: Chevrolet, // rasm nomi sizda qanday nomlanganiga qarab o‘zgartiring
     title: {
-      uz: "Chevrolet Uz",
-      ru: "Шевроле Узбекистан",
-      en: "Chevrolet Uz",
-      de: "Chevrolet Usbekistan",
-      zh: "雪佛兰乌兹别克斯坦",
+      uz: "Uz Auto Motors",
+      ru: "Уз Авто Моторс",
+      en: "Uz Auto Motors",
+      de: "Uz Auto Motors",
+      zh: "乌兹汽车公司",
     },
   },
   {
