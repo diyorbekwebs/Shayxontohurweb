@@ -5,27 +5,42 @@ import Card from "./card";
 import { useTranslation } from "react-i18next";
 
 export default function ContactP() {
-  const { i18n } = useTranslation();
-  const lang = i18n.language || "uz"; // fallback til
+  const { i18n, t } = useTranslation();
+  const lang = i18n.language || "uz";
 
   return (
-    <div className="mt-[30px]">
+    <section
+      className="mt-[30px]"
+      aria-labelledby="contact-section-title"
+    >
       <div className="container">
         <div className="flex flex-col gap-[50px]">
-          <div className="flex gap-[16px] flex-wrap">
+          <h2 id="contact-section-title" className="sr-only">
+            {t("contact.sectionTitle") || "Aloqa bo‘limi"}
+          </h2>
+
+          <div
+            className="flex gap-[15px]"
+            role="list"
+            aria-label={t("contact.cards") || "Aloqa kartalari"}
+          >
             {contactdb.map((e) => (
-              <Card
-                key={e.id}
-                text={e.title[lang]}
-                text2={e.text ? e.text[lang] : undefined}
-                gmail={e.gmail ? e.gmail[lang] : undefined}
-                img={e.img}
-              />
+              <article key={e.id} role="listitem">
+                <Card
+                  text={e.title[lang]}
+                  text2={e.text ? e.text[lang] : undefined}
+                  gmail={e.gmail ? e.gmail[lang] : undefined}
+                  img={e.img}
+                />
+              </article>
             ))}
           </div>
-          <Contact />
+
+          <div aria-label={t("contact.formTitle") || "Aloqa formasi"}>
+            <Contact />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

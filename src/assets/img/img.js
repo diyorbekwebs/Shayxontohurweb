@@ -1,5 +1,5 @@
-// import Logo from "./logo.svg";
-import Logo from "./logo.png";
+import Logo from "./logo.svg";
+// import Logo from "./logo.png";
 // import Logo from "./logo1.png";
 import Eye from "./eye.svg";
 import Globe from "./globe.svg";

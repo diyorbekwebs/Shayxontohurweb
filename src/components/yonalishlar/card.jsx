@@ -1,6 +1,7 @@
 import React from "react";
 import { TopVec } from "../../assets/img/img";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const T1 = styled.p`
   font-weight: 700;
@@ -15,7 +16,14 @@ const T1 = styled.p`
 
 export default function Card({ title, img, date }) {
   return (
-    <div className="flex flex-col gap-4 sm:gap-[29px] w-full max-w-[417px]">
+    <motion.div
+      className="flex flex-col gap-4 sm:gap-[29px] w-full max-w-[417px]"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      whileHover={{ scale: 1.05 }}
+    >
       <img
         className="w-full h-[200px] sm:h-[250px] md:h-[304px] object-cover rounded-[10px]"
         src={img}
@@ -28,6 +36,6 @@ export default function Card({ title, img, date }) {
       </div>
 
       {/* <p className="text-sm text-gray-500">{date}</p> */}
-    </div>
+    </motion.div>
   );
 }

@@ -31,5 +31,9 @@
     "management": "Rahbariyat",
     "contact": "Aloqa",
     "address": "Manzil"
+  },
+  "yonalishlar": {
+    "btn": "Ko‘proq ko‘rsatish",
+    "title": "Yo'nalishlar"
   }
 }

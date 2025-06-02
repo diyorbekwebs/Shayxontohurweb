@@ -4,7 +4,8 @@ import styled from "styled-components";
 import Card from "./card";
 import { oquvY } from "../../constant/yonalish/oquv-yonalish";
 
-export const Title = styled.h2`  /* h1 emas endi */
+export const Title = styled.h2`
+  /* h1 emas endi */
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 28px;
@@ -55,9 +56,9 @@ export default function Yonalishlar() {
               <button
                 onClick={() => setShowAll(true)}
                 className="bg-[#76A43D] hover:bg-[#5d832f] transition-colors duration-300 py-2 px-6 text-white font-semibold text-sm sm:text-[16px] rounded-[10px]"
-                aria-label={t("yonalishlar.showMore")}
+                aria-label={t("yonalishlar.btn")}
               >
-                {t("yonalishlar.showMore")}
+                {t("yonalishlar.btn")}
               </button>
             )}
           </div>
