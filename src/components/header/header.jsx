@@ -23,7 +23,7 @@ export default function Header() {
           <div className="flex items-center justify-between w-full lg:w-auto gap-4">
             <Link to={"/"}>
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                <img src={Logo} alt="Logo" className="w-8 sm:w-10" />
+                <img src={Logo} alt="Logo" className="w-10 sm:w-[70px]" />
                 <h3 className="font-bold uppercase text-sm sm:text-base md:text-[16px] w-[200px] sm:w-[250px] lg:w-[300px] md:w-[300px]">
                   {t("header.title")}
                 </h3>

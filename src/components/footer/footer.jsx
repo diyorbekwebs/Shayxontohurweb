@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="container">
         <div className="w-full pt-[63px] pb-[82px] flex justify-between">
           <div className="flex items-center gap-[17px]">
-            <img src={Logo} alt="logo" />
+            <img className="w-[100px]" src={Logo} alt="logo" />
             <Title>{t("footer.title")}</Title>
           </div>
           <div className="flex gap-[66.5px]">
