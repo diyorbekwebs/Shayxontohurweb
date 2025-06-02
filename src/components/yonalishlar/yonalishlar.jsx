@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Card from "./card";
 import { oquvY } from "../../constant/yonalish/oquv-yonalish";
 
-export const Title = styled.h1`
+export const Title = styled.h2`  /* h1 emas endi */
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 28px;
@@ -29,7 +29,10 @@ export default function Yonalishlar() {
   const visibleCards = showAll ? oquvY : oquvY.slice(0, 3);
 
   return (
-    <div className="mt-[60px] sm:mt-[80px] lg:mt-[100px] mb-[60px] sm:mb-[80px] lg:mb-[100px]">
+    <section
+      className="mt-[60px] sm:mt-[80px] lg:mt-[100px] mb-[60px] sm:mb-[80px] lg:mb-[100px]"
+      aria-label={t("yonalishlar.title")}
+    >
       <div className="container">
         <div className="flex flex-col gap-6 sm:gap-[27px]">
           <Title>{t("yonalishlar.title")}</Title>
@@ -52,6 +55,7 @@ export default function Yonalishlar() {
               <button
                 onClick={() => setShowAll(true)}
                 className="bg-[#76A43D] hover:bg-[#5d832f] transition-colors duration-300 py-2 px-6 text-white font-semibold text-sm sm:text-[16px] rounded-[10px]"
+                aria-label={t("yonalishlar.showMore")}
               >
                 {t("yonalishlar.showMore")}
               </button>
@@ -59,6 +63,6 @@ export default function Yonalishlar() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
