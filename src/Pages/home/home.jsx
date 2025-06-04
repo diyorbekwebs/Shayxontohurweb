@@ -48,7 +48,7 @@ export default function Home() {
       <Carusel />
       <Yonalishlar />
       <Oquvtizim />
-      <Card />
+      {/* <Card /> */}
       <History />
       <Whyus />
       <Contact />

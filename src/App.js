@@ -15,26 +15,22 @@ import IntroAnimation from "./IntroAnimation";
 import TestBanner from "./TestBanner";
 
 export default function App() {
-  const [showIntro, setShowIntro] = useState(false);
+  // const [showIntro, setShowIntro] = useState(true); // Always true initially
 
-  useEffect(() => {
-    userhelperlibrary();
-    const hasSeenIntro = localStorage.getItem("hasSeenIntro");
-    if (!hasSeenIntro) {
-      setShowIntro(true);
-      setTimeout(() => {
-        setShowIntro(false);
-        localStorage.setItem("hasSeenIntro", "true");
-      }, 3000); // 3 sekunddan keyin yo‘qoladi
-    }
-  }, []);
+  // useEffect(() => {
+  //   userhelperlibrary();
+  //   const timer = setTimeout(() => {
+  //     setShowIntro(false); // Hide after 3 seconds
+  //   }, 100);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
-      {showIntro && <IntroAnimation />}
-      {!showIntro && (
+      {/* {showIntro && <IntroAnimation />}
+      {!showIntro && ( */}
         <>
-        <TestBanner/>
+          <TestBanner />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -48,7 +44,7 @@ export default function App() {
             </Route>
           </Routes>
         </>
-      )}
+      {/* )} */}
     </>
   );
 }

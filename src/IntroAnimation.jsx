@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const IntroAnimation = () => {
-  const [show, setShow] = React.useState(false);
+const translations = {
+  uz: "Xush kelibsiz!",
+  ru: "Добро пожаловать!",
+  en: "Welcome!",
+  de: "Willkommen!",
+  zh: "欢迎！",
+};
 
-  React.useEffect(() => {
-    const seen = localStorage.getItem("hasSeenIntro");
-    if (!seen) {
-      setShow(true);
-      setTimeout(() => {
-        setShow(false);
-        localStorage.setItem("hasSeenIntro", "true");
-      }, 3000); // 3 seconds
-    }
+const getLangFromLocale = (locale) => {
+  if (locale.startsWith("uz")) return "uz";
+  if (locale.startsWith("ru")) return "ru";
+  if (locale.startsWith("de")) return "de";
+  if (locale.startsWith("zh")) return "zh";
+  return "en"; // default
+};
+
+const IntroAnimation = () => {
+  const [lang, setLang] = useState("en");
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    const locale = navigator.language || navigator.userLanguage;
+    const detectedLang = getLangFromLocale(locale);
+    setLang(detectedLang);
+
+    const timer = setTimeout(() => setShow(false), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -31,7 +46,7 @@ const IntroAnimation = () => {
             transition={{ duration: 1 }}
             className="text-4xl font-bold text-green-700"
           >
-            Xush kelibsiz!
+            {translations[lang]}
           </motion.h1>
         </motion.div>
       )}
