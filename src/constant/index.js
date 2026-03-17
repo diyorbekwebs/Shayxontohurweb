@@ -20,6 +20,11 @@ export const list = [
     link: "leadership",
   },
   {
+    id: 5,
+    name: "blog",
+    link: "blog",
+  },
+  {
     id: 6,
     name: "contact",
     link: "contact",

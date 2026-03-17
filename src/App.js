@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import ScrollToTop from "./scroll";
 import IntroAnimation from "./IntroAnimation";
 import TestBanner from "./TestBanner";
+import Blog from "./components/blog/blog";
 
 export default function App() {
   // const [showIntro, setShowIntro] = useState(true); // Always true initially
@@ -37,6 +38,7 @@ export default function App() {
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="news" element={<News />} />
+              <Route path="blog" element={<Blog />} />
               <Route path="leadership" element={<Leadership />} />
               <Route path="contact" element={<ContactPage />} />
               <Route path="kafedra" element={<KafedraPage />} />
