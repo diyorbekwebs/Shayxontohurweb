@@ -1,6 +1,21 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+const dasturlarFiles = [
+  { id: "d1", title: "Avtomobil tuzilishi", file: "Avtomobil tuzilishi.pdf" },
+  { id: "d2", title: "Avtomobil elektr va elektron jihozlari tuzilishi", file: "Avtomobil_elektr_va_elektron_jihozlari_tuzilishi,_ularga_texnik.pdf" },
+  { id: "d3", title: "Ayollar tikuv va namlab isitib ishlov berish jihozlarida ishlash", file: "Ayollar_tikuv_va_namlab_isitib_ishlov_berish_jihozlarida_ishlash.pdf" },
+  { id: "d4", title: "Chilangarlik o'quv amaliyoti", file: "Chilangarlik o'quv amaliyoti.pdf" },
+  { id: "d5", title: "Diagnostika apparatlarini tuzilishi va ishlash prinsiplari", file: "Diagnostika aparatlarini tuzilishi va ishlash prinsiplari.pdf" },
+  { id: "d6", title: "Kasbga va professional dual ta'lim tizimiga kirish", file: "KASBGA  VA  PROFESSIONAL  DUAL  TA'LIM TIZIMIGA KIRISH.pdf" },
+  { id: "d7", title: "Nemis tili", file: "Nemis tili.pdf" },
+  { id: "d8", title: "O'qitish material toplami Xorijiy til 180 soat", file: "O'qitish material toplami Xorijiy til 180 soat.pdf" },
+  { id: "d9", title: "Oziq-ovqat mahsulotlarini sotish ishlari", file: "Oziq-ovqat mahsulotlarini sotish ishlari.pdf" },
+  { id: "d10", title: "Tikuvchilik jihozlari va uskunalari fanidan", file: "Tikuvchilik jihozlari  va uskunalari  fanidan.pdf" },
+  { id: "d11", title: "Yonilg'i ta'minlash tizimini servis xizmat ko'rsatish va ta'mirlash", file: "Yonilg'i_ta'minlash_tizimini_servis_xizmat_ko'rsatish_va_ta'mirlash.pdf" },
+  { id: "d12", title: "Yoqilg'i quyish shoxobchasi", file: "Yoqilg'i  quyish  shoxobchasi.pdf" },
+];
+
 const data = {
   uz: {
     subtitle: "Blog — 2025-2026 o'quv yili",
@@ -8,6 +23,7 @@ const data = {
     back: "← Orqaga",
     noData: "Hozircha ma'lumot yo'q.",
     pedagogikTitle: "Pedagogik kengash bayonnomalar",
+    dasturlarTitle: "Dasturlar",
     participants: (n) => `👥 ${n} nafar qatnashdi`,
     typeAnnual: "Yillik",
     typeExtra: "Navbatdan tashqari",
@@ -26,6 +42,7 @@ const data = {
     back: "← Назад",
     noData: "Данных пока нет.",
     pedagogikTitle: "Протоколы педагогического совета",
+    dasturlarTitle: "Программы",
     participants: (n) => `👥 ${n} участников`,
     typeAnnual: "Ежегодный",
     typeExtra: "Внеплановый",
@@ -44,6 +61,7 @@ const data = {
     back: "← 返回",
     noData: "暂无数据。",
     pedagogikTitle: "教育委员会会议记录",
+    dasturlarTitle: "课程",
     participants: (n) => `👥 ${n} 名参与者`,
     typeAnnual: "年度",
     typeExtra: "临时",
@@ -62,6 +80,7 @@ const data = {
     back: "← Zurück",
     noData: "Noch keine Daten.",
     pedagogikTitle: "Protokolle des Pädagogischen Rates",
+    dasturlarTitle: "Programme",
     participants: (n) => `👥 ${n} Teilnehmer`,
     typeAnnual: "Jährlich",
     typeExtra: "Außerplanmäßig",
@@ -80,6 +99,7 @@ const data = {
     back: "← Back",
     noData: "No data available yet.",
     pedagogikTitle: "Pedagogical Council Minutes",
+    dasturlarTitle: "Programs",
     participants: (n) => `👥 ${n} participants`,
     typeAnnual: "Annual",
     typeExtra: "Extraordinary",
@@ -94,13 +114,35 @@ const data = {
   },
 };
 
-const files = {
+const kengashFiles = {
   1: "/Pedagogik kengash №1.pdf",
   2: "/Pedagogik kengash №2.pdf",
   4: "/Pedagogik kengash №4.pdf",
   6: "/Pedagogik kengash №6.pdf",
   7: "/Pedagogik kengash №7.pdf",
   8: "/Pedagogik kengash №8.pdf",
+};
+
+const cardStyle = {
+  background: "#fff",
+  border: "1px solid #d4e8b0",
+  borderRadius: "10px",
+  padding: "1rem 1.25rem",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: "1rem",
+};
+
+const btnStyle = {
+  display: "inline-block", padding: "8px 16px", background: "#6c9b31",
+  color: "#fff", borderRadius: "8px", textDecoration: "none",
+  fontSize: "13px", fontWeight: 600, whiteSpace: "nowrap", flexShrink: 0,
+};
+
+const backBtnStyle = {
+  background: "none", border: "none", color: "#6c9b31",
+  cursor: "pointer", fontSize: "14px", marginBottom: "1rem", padding: 0, fontWeight: 600,
 };
 
 export default function Blog() {
@@ -118,17 +160,14 @@ export default function Blog() {
   }, [i18n]);
 
   const t = data[lang] || data["uz"];
-
   const handleBack = () => setActiveCategory(null);
 
   return (
-    <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem 1rem", fontFamily: "sans-serif", color: "#1a2810", marginBottom: "250px" }}>
+    <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem 1rem", fontFamily: "sans-serif", color: "#1a2810", minHeight: "60vh" }}>
       <h1 style={{ fontSize: "1.6rem", marginBottom: "0.25rem", color: "#4a6e1f" }}>
         Shayxontohur tuman texnikumi
       </h1>
-      <p style={{ color: "#5a7040", marginBottom: "2rem", fontSize: "14px" }}>
-        {t.subtitle}
-      </p>
+      <p style={{ color: "#5a7040", marginBottom: "2rem", fontSize: "14px" }}>{t.subtitle}</p>
 
       {/* Category list */}
       {!activeCategory && (
@@ -138,14 +177,9 @@ export default function Blog() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               style={{
-                background: "#fff",
-                border: "1px solid #d4e8b0",
-                borderRadius: "10px",
-                padding: "1.2rem 1.5rem",
-                cursor: "pointer",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+                background: "#fff", border: "1px solid #d4e8b0", borderRadius: "10px",
+                padding: "1.2rem 1.5rem", cursor: "pointer", display: "flex",
+                justifyContent: "space-between", alignItems: "center",
               }}
               onMouseEnter={e => e.currentTarget.style.background = "#f3fae6"}
               onMouseLeave={e => e.currentTarget.style.background = "#fff"}
@@ -157,30 +191,41 @@ export default function Blog() {
         </div>
       )}
 
+      {/* Dasturlar */}
+      {activeCategory === t.categories[0] && (
+        <div>
+          <button onClick={handleBack} style={backBtnStyle}>{t.back}</button>
+          <h2 style={{ fontSize: "1.2rem", color: "#4a6e1f", marginBottom: "1.25rem" }}>{t.dasturlarTitle}</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {dasturlarFiles.map((item) => (
+              <div key={item.id} style={cardStyle}>
+                <div style={{ flex: 1, fontWeight: 600, fontSize: "15px" }}>{item.title}</div>
+                <a href={item.file} target="_blank" rel="noreferrer" style={btnStyle}>
+                  PDF ↗
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Ta'limga oid */}
+      {activeCategory === t.categories[1] && (
+        <div>
+          <button onClick={handleBack} style={backBtnStyle}>{t.back}</button>
+          <h2 style={{ fontSize: "1.2rem", color: "#4a6e1f", marginBottom: "1.25rem" }}>{t.categories[1]}</h2>
+          <p style={{ color: "#5a7040", fontSize: "14px" }}>{t.noData}</p>
+        </div>
+      )}
+
       {/* Pedagogik kengash */}
       {activeCategory === t.categories[2] && (
         <div>
-          <button onClick={handleBack} style={{ background: "none", border: "none", color: "#6c9b31", cursor: "pointer", fontSize: "14px", marginBottom: "1rem", padding: 0, fontWeight: 600 }}>
-            {t.back}
-          </button>
-          <h2 style={{ fontSize: "1.2rem", color: "#4a6e1f", marginBottom: "1.25rem" }}>
-            {t.pedagogikTitle}
-          </h2>
+          <button onClick={handleBack} style={backBtnStyle}>{t.back}</button>
+          <h2 style={{ fontSize: "1.2rem", color: "#4a6e1f", marginBottom: "1.25rem" }}>{t.pedagogikTitle}</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {t.posts.map((post) => (
-              <div
-                key={post.id}
-                style={{
-                  background: "#fff",
-                  border: "1px solid #d4e8b0",
-                  borderRadius: "10px",
-                  padding: "1rem 1.25rem",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: "1rem",
-                }}
-              >
+              <div key={post.id} style={cardStyle}>
                 <div style={{ flex: 1 }}>
                   <span style={{
                     fontSize: "11px", fontWeight: 600, padding: "2px 8px", borderRadius: "20px",
@@ -194,43 +239,12 @@ export default function Blog() {
                   <div style={{ fontSize: "13px", color: "#5a7040", marginBottom: "6px" }}>{post.description}</div>
                   <div style={{ fontSize: "12px", color: "#888" }}>{t.participants(post.participants)}</div>
                 </div>
-                <a
-                  href={files[post.id]}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    display: "inline-block", padding: "8px 16px", background: "#6c9b31",
-                    color: "#fff", borderRadius: "8px", textDecoration: "none",
-                    fontSize: "13px", fontWeight: 600, whiteSpace: "nowrap", flexShrink: 0,
-                  }}
-                >
+                <a href={kengashFiles[post.id]} target="_blank" rel="noreferrer" style={btnStyle}>
                   PDF ↗
                 </a>
               </div>
             ))}
           </div>
-        </div>
-      )}
-
-      {/* Dasturlar */}
-      {activeCategory === t.categories[0] && (
-        <div>
-          <button onClick={handleBack} style={{ background: "none", border: "none", color: "#6c9b31", cursor: "pointer", fontSize: "14px", marginBottom: "1rem", padding: 0, fontWeight: 600 }}>
-            {t.back}
-          </button>
-          <h2 style={{ fontSize: "1.2rem", color: "#4a6e1f", marginBottom: "1.25rem" }}>{t.categories[0]}</h2>
-          <p style={{ color: "#5a7040", fontSize: "14px" }}>{t.noData}</p>
-        </div>
-      )}
-
-      {/* Ta'limga oid */}
-      {activeCategory === t.categories[1] && (
-        <div>
-          <button onClick={handleBack} style={{ background: "none", border: "none", color: "#6c9b31", cursor: "pointer", fontSize: "14px", marginBottom: "1rem", padding: 0, fontWeight: 600 }}>
-            {t.back}
-          </button>
-          <h2 style={{ fontSize: "1.2rem", color: "#4a6e1f", marginBottom: "1.25rem" }}>{t.categories[1]}</h2>
-          <p style={{ color: "#5a7040", fontSize: "14px" }}>{t.noData}</p>
         </div>
       )}
     </div>
